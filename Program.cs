@@ -29,11 +29,9 @@ class Question
 
     public bool CheckAnswer(List<int> studentAnswers)
     {
-        // لو عدد الإجابات مختلف => غلط
         if (studentAnswers.Count != CorrectAnswers.Count)
             return false;
 
-        // نرتب الليستتين للمقارنة بغض النظر عن الترتيب
         studentAnswers.Sort();
         CorrectAnswers.Sort();
 
@@ -177,19 +175,6 @@ class Program
 
 
 
-
-
-//public double CalcScore(List<List<int>> StudentGrade)
-//{
-//    double score = 0;
-//    for (int i = 0; i < Questions.Count; i++)
-//    {
-//        if (Questions[i].CheckAnswer(StudentGrade[i]))
-//        {
-//            score += Questions[i].Mark;
-//        }
-//    }
-//    return score; 
 
 
 
